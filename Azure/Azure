@@ -1,1 +1,10 @@
 Azure
+
+Design an App architrecture Solution:-
+Messages vs Events: Events used for broadcasting (concept of publisher vs subscriber). Events lightweight than messages.
+Design a messaging Solution:
+Azure Queue Storage: To process messages asynchronously. Can be accessed using http/https. Size of messages 64KB. Queue may contain millions of messages and depends on capacity of Storage account.
+Azure Service Bus Queues:
+Azure Service Bus Publish Subscribe topic: Multiple receivers/destinations for a single message
+Design an event Solution:
+Event Hub messaging Solution: Supports streaming data. Collect events from real time scenario. Uses pull model.
