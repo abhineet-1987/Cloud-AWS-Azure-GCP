@@ -8,3 +8,20 @@ Azure Service Bus Queues:
 Azure Service Bus Publish Subscribe topic: Multiple receivers/destinations for a single message
 Design an event Solution:
 Event Hub messaging Solution: Supports streaming data. Collect events from real time scenario. Uses pull model.
+
+
+
+Design Business Continuity Solution:-
+Azure Backup Service: For Azure and Non-Azure Workloads. Azure backup vault vs Azure Recovery Services Vault (Azure key vault is different)
+Azure backup vault requires components to be in same region.
+GRS (Geo-Redundant Storage) in Azure is a replication option that stores your data in two geographically separated Azure regions, ensuring durability and high availability in the event of a regional outage.
+LRS (Locally Redundant Storage) in Azure is a storage replication option that keeps multiple copies of your data within a single Azure region or data center to protect against local hardware failures.
+
+Design for Azure Blob backup and recovery:-
+Soft Delete and Versioning option
+A Storage Account in Azure is a container that provides access to various Azure storage services, such as Blob, File, Queue, and Table storage
+In an Azure Storage Account, a container is a logical grouping within Blob storage that holds blobs, which are files or data objects like images, videos, documents, or backups.
+PITR point in time restore for blobs
+
+Azure files backup and recovery:-
+With the help of share snapshots
