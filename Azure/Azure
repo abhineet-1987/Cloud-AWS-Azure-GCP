@@ -24,4 +24,27 @@ In an Azure Storage Account, a container is a logical grouping within Blob stora
 PITR point in time restore for blobs
 
 Azure files backup and recovery:-
-With the help of share snapshots
+With the help of share snapshots we can take snapshots of our file shares and store it in recovery services vault.
+Snapshots cannot be modified and also we cannot delete file share which has snapshots associated with it.
+Creation snapshot process is manual. However using backup policies we can automate it.
+
+Azure VM backup and recovery:-
+By onboarding the VM to the recovery service vault and associating with a backup policy, we can take the backup of Azure VMs. Keep in mind of backup schedules and retention policy.
+CRR: Cross region restore
+Locally redundant vs Zone redundant vs Geo redundant
+We can use Azure backup server if we have to backp VM located in on-premise
+
+Azure SQL backup and recovery: 
+We can use Azure recovery service vault.
+We can go to SQL server and define backup and retention over there
+
+Azure Site Recovery ASR:
+DR solutions for Azure, on-premises and other cloud providers
+We can do migration using Azure Migrate or ASR
+Go to Recovery Service Vault and here we can configure recovey plan i.e which part we have to recover first for eg database is always to be first recovered in three tier application
+
+
+
+
+
+
