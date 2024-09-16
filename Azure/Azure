@@ -42,9 +42,33 @@ Azure Site Recovery ASR:
 DR solutions for Azure, on-premises and other cloud providers
 We can do migration using Azure Migrate or ASR
 Go to Recovery Service Vault and here we can configure recovey plan i.e which part we have to recover first for eg database is always to be first recovered in three tier application
+Failover to the DR site is although manual by going to Recovery Service Vault we can also automate it using Azure monitor and trigger an automation runbook
+When you have to failback to primary , create Azure recovery vault in primary and resynchronize, so its a back and forth procedure
+In case of on-premise environment, backup agent and ASR mobility agent is running for the on-premise VMs. WE also have a replication appliance which has process server and configuration server which are responsible for collecting the data from the agents and providing to ASR
 
-
-
-
+Design a non-relational data storage Solution in Azure:
+Types of data: Structured, Semi-Structured (json,xml,yaml), Unstructured data
+Storage services:
+Container holds blob data
+Files (NFS Soln) holds directories
+Table (No SQL DB) -> Entitities
+Queue -> Messages
+Design for Azure Storage accounts:
+Choose the storage a/c type
+Design for data redundancy:
+Replication strategy is based on SLA, durability and cost
+LRS, GRS, ZRS, GZRS
+Design for Azure Blob storage:
+Choose the storage access tier
+Containers in Azure are are like s3 buckets in AWS 
+Design for Azure Files:
+Accessing file shares: Using SMB protocol we can directly mount file shares on windows, linux mac os.
+Using Azure File sync we can transform our on-premise windows server into cache of Azure file shares
+HDD vs SDD storage for file shares
+Azure blob storage vs Azure files (NFS) vs Azure Netapp files (supports multiple protocols)
+SMB vs NFS
+Design for Azure Disks:
+Disk caching feature: we can optimize our read and write operations to virtual hard disks using this feature. Caching types None, Read-only, Read-Write
+Securing data disks: using multiple encryption strategies. Azure Disks encryption, Server Side encryption, Encryption at host
 
 
