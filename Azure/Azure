@@ -90,3 +90,12 @@ Data security of SQL databases:
   Security management: ATP, SQL Audit, Vulnerability assessment, data discovery and classification
 Design for SQL Edge: Relational database for IoT and IoT Edge deployments
 
+Azure Data Integration Soln:
+Design for Azure data factory ADF: Data will be ingested into storage blob -> Data Storage (Synapse for data warehousing) -> Azure Analysis Service -> Power BI for visualization
+ADF can be used for Big data and relational data warehousing using SSIS SQL Server integration service. Using the ADF authoring tool you'll be able to set the pipelines from the GUI
+Design for Azure Data Lake storage:
+
+
+
+
+
