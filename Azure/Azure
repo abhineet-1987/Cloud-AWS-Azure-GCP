@@ -77,4 +77,16 @@ Design for Cosmos db and tables:
 Table storage stores NoSQL data in the cloud. Use Azure Storage explorer to access table created. Partition key, Row key.
 We have another option for No-SQL DB i.e Azure Cosmos DB. Offers more high availability options than table. Automatic and instant scalability. It is fully platform managed solution
 Azure cache for Redis
+Table storage (replication through GRS) vs Cosmos DB (can be replicated across multiple regions globally)
+Cosmos DB offers 6 apis : NoSQL, MongoDB, PostgreSQL, Apache Cassandra, Apache Gremlin, Table API
+Design for relational data storage Soln:
+Design for Azure SQL database: SQL on VM (IaaS), Managed Instance (Single, Instance pool) PaaS, Databases (Single database, Elastic pool) PaaS
+Design for database scalability: Azure SQL database - DTU purchasing model vs vCore purchasing model
+Database availability: Standard model, Premium model, Hyperscale model
+Data security of SQL databases: 
+  Network: Virtual Network, Azure Firewall, Private link
+  IAM: Authentication, Azure RBAC, Roles, Row level security
+  Data protection: Encryption in use, rest, flight, dynamic data masking
+  Security management: ATP, SQL Audit, Vulnerability assessment, data discovery and classification
+Design for SQL Edge: Relational database for IoT and IoT Edge deployments
 
