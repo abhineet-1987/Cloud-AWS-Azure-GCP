@@ -93,9 +93,30 @@ Design for SQL Edge: Relational database for IoT and IoT Edge deployments
 Azure Data Integration Soln:
 Design for Azure data factory ADF: Data will be ingested into storage blob -> Data Storage (Synapse for data warehousing) -> Azure Analysis Service -> Power BI for visualization
 ADF can be used for Big data and relational data warehousing using SSIS SQL Server integration service. Using the ADF authoring tool you'll be able to set the pipelines from the GUI
-Design for Azure Data Lake storage:
+Design for Azure Data Lake storage: It stores data in blobs or files. Scalable cost effective storage for Big Data Analytics. For data analytics go for ADLS.
+Adhoc data, relational data, streaming data -> ADLS. This stored data can be accessed using Azure data factory, Azure Data expolrer etc. 
+In ADLS redundancy is not set by default, need to setup replication.
+Blob storage (flat namespaces, not compatible with Hadoop) vs ADLS (hierarchical namespaces, Hadoop compatible)
+Enable Data lake storage Gen2 box while creating storage account to enable ADLS
+Design for Azure Data Bricks: Fully managed cloud based Big Data and Machine Learning platform
+Databricks SQL (Analysts can run queries against data stored in ADLS), Databricksd Data Science and Engineering (data ingested using ADF or any other ervice is stored in ADLS, this stored data can be read using DataBricks and create insights using Spark), Databricks Machine Learning
+Databricks has control plane and data plane.
+Design for Azure Synapse Analytics: Single service for data integration, enterprise data warehousing, big data analytics
+Application queries -> Control node -> polybase fetches data from structured and unstructured data sources -> process by compute nodes -> resultant data stored in Azure storage
+Different components of Synapse: Synapse Studio, Synapse Link, Synapse Spark, Synapse pipelines, Synapse SQL
+ADF (cross region data flow supported, Spark not supported) vs Azure Synapse Analytics (vice versa)
+Databricks (pytorch, tensorflow, kers supported) vs Azure Synapse Analytics (Azure ML built in support, Spark ML)
+Design for Azure Stream Analytics: Fully managed PaaS offering for real time analytics for data streams
+Design for Data Flow Strategy: hot vs warm vs cold data path
+Use case: SQL DB -> Azure Data Factory -> ADLS -> Azure Synapse -> Power BI
 
-
-
+Design Migration Soln:
+Design using Cloud adoption Framework CAF:
+Design for Azure migration framework: subset of CAF
+Migration strategy: Rehost, Refactor, Rearchitect, Rebuild
+Assessing workloads: windows, sql server, linux, applications, SAP Hana, Specialized workloads
+Azure Migrate-> create project -> Assessment tool + Migration tool. Post assessment in assessment report we'll get the complete details including cost details
+DMA data migration assistant for SQL server migration
+Migration tools: Server migration, Database migration, Data box
 
 
