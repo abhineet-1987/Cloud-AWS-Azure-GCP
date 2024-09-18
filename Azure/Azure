@@ -117,6 +117,29 @@ Migration strategy: Rehost, Refactor, Rearchitect, Rebuild
 Assessing workloads: windows, sql server, linux, applications, SAP Hana, Specialized workloads
 Azure Migrate-> create project -> Assessment tool + Migration tool. Post assessment in assessment report we'll get the complete details including cost details
 DMA data migration assistant for SQL server migration
-Migration tools: Server migration, Database migration, Data box
+Migration tools: Server migration, Database migration, Data box (disk provided by Microsoft for data transfer from one premise greater than 40 TB)
+Agentless vs agent based replication
+Database migration:Online (no downtime) and offline (downtime of database during migration) migration of database. We can use DMA OR Azure Database migration service for db migration to Azure
+Install DMA on SQL server -> and proceed
+Design for Storage migration:
+Online migration: Windows server storage migration service, Azure File Sync, Azcopy (cli based tool), Storage expolrer (gui based tool)
+Offline migration: Azure import/export (managed by customer), Azure Databox (managed by Microsoft)
+Large dataset with low n/w bandwidth : Import/export or Data box
+Large dataset with high n/w bandwidth : AZcopy, ADF, Azure Stack Edge, Azure Data box gateway
+Small dataset: Azure Storage expolrer, AZcopy, Azure portal
+Azure TCO calulator:estimate monthly costs before migrating
+
+Design logging and monitoring Soln:
+Azure monitor: Manages monitoring for both Azure and non-Aure Resources
+Logs and Metrics. Data collected cab be ingested into inetrnal services like Log analytics, Azure storage, Event hub or external systems like Grafan or Splunk
+LAW in Azure refers to Log Analytics Workspace (LAW). It is a central data repository where Azure Monitor stores log and telemetry data.
+Design for log analytics: Managed service, uses KQL. KQL, or Kusto Query Language, is a powerful query language used in Azure to retrieve and analyze large sets of data from services like Azure Monitor, Log Analytics, and Application Insights
+Log Analytics is a tool within Azure Monitor
+Design for Azure workbooks: Design rich visuals reports
+Design for Azure Insights: monitor your resources by collecting Telemetry data
+Design for Azure Data explorer: Managed data expolration service for log and metrics analysis. Can be further integrated with Azure monitor and Sentinel
+
+
+
 
 
