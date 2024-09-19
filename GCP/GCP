@@ -1,1 +1,4 @@
 GCP
+
+GCP regions consist of 3 or more zones (discrete data centers)
+GCP region picker: It will give you recommended regions
