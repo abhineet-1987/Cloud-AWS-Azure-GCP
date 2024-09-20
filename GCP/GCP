@@ -2,3 +2,52 @@ GCP
 
 GCP regions consist of 3 or more zones (discrete data centers)
 GCP region picker: It will give you recommended regions
+Select Organization and Project post logging into GCP
+Compute Engine for VM creation. We can create VM from scratch, from existing machine image, from existing template
+Create firewall rules. It will ask for network (or vpc) and post creation this rule will be applied to all resources under that network
+Resource hierarchy: Organizations, Folders, Projects, Resources
+It is possible to access resources in one Google Cloud Platform (GCP) project from another project, both when the projects are within the same organization and across different organizations. Need to configure IAM roles accordingly
+
+Billing in GCP:
+Billing cycle for personal account -> month end
+Billing cycle for Orgs -> year end
+Go to Billing and you can see everything there
+We can set budgeting alerts
+
+Compute engine:
+users -> vpc firewall rules -> compute engines -> persistent disks
+Enable compute engine API
+Click on SSH option to connect to VM
+price per second usage
+Compute engine machine types:-
+scale out workloads T2D
+General purpose: E2,N1,N2, N2D
+High memory:M1, M2
+compute intense: C2, C2D
+Most demanding applications and workloads : A2
+Persistent disks : are durable network storage devices that your instances can access as physical disks on a server
+Scaling compute instance: Using Instance group (min, max, scalability rule i.e if collective cpu utiliz of instances goes > 80%, then scale, it will add one vm and wait for 2 mins)
+While creating instance groups it asks for instance templates
+Supports predictive auto scaling
+Load Balancer: Concept to route traffic between different instance groups
+Load balancer: http(s) LB, TCP LB, UDP LB
+Set up health check while configuring LB
+While creating instance groups , under Management section you can specify startup script under automation. If startup script fails the VM will not be turned off
+
+Databases in GCP:
+Cloud SQL: Fully managed MySQL,PostgreSQL and SQL server. We need to enable Cloud SQL Admin api. We can enable delete protection
+Cloud Spanner: Suitable for Oracle
+AlloyDB : for Postgresql db users
+Non-relational :-
+Cloud BigTable: Fully managed No-SQL DB column store like HBase or Cassandra
+Fire Store : document based
+Memory store: Fully managed Redis and memcached
+
+
+
+
+Object storage:
+Cloud Storage or buckets. Upper size limit is very high. Can be used for backup and archiving of data.
+Post logging into GCP, make sure you are in the right project. Bucket name should be globally unique
+Storage class: standard, nearline, coldline, archive 
+Minimum storage duration : standard (none), nearline (30 days), coldline(90 days), archive(365 days)
