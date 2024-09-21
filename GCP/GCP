@@ -51,3 +51,37 @@ Cloud Storage or buckets. Upper size limit is very high. Can be used for backup 
 Post logging into GCP, make sure you are in the right project. Bucket name should be globally unique
 Storage class: standard, nearline, coldline, archive 
 Minimum storage duration : standard (none), nearline (30 days), coldline(90 days), archive(365 days)
+
+
+To connect on prem to GCP use GCP Interconnect and VPN
+Architecture Streaming data from IoT : Ingest to pub/sub -> pipeline Dataflow -> Cloud storage, Datastore, Cloud Bigtale -> Once we have the data we can do Analytics using Datflow, Bigquery, Dataproc -> Application and presentation can be done using App engine, compute engine, GKE
+Architecture Log processing:  Microservice container engine -> Log collection (logging) -> Cloud storage and/or Pub/sub -> Dataflow (log processing) -> Big Query (log analytics)
+Dataflow is a fully managed, serverless data processing service on Google Cloud Platform (GCP) that enables the real-time and batch processing of large datasets.
+
+Security in GCP:
+Data Replication
+Adapt Single Sign On
+IAM
+Cloud Armor: Google Cloud Armor is primarily used to protect applications that are fronted by Google Cloud’s load balancers, providing DDoS mitigation and WAF functionality.
+Threat detection: Set up rules to alert on misconfigurations
+
+GKE: Autopilot vs Standard . Easy integration with load balancers
+To use GKE enable Kubernetes engine API
+Users -> Cloud Load balancer -> GKE (auto-pilot)
+Cloud Run: To run containerized applications. Python, java, .NET, Go, Node.js, Ruby. Only pay when your code is running. Can be integrated with LB
+Users -> Cloud Load balancer -> Cloud run 
+Each cloud run container can take 80 requests by default at same time. Can be increased to 1000.
+
+APIs:
+Apigee in GCP: We can build APIs using this tool both in GCP and on-premises
+
+Big Data:
+IoT users -> Ingest data in Cloud pub/sub -> Cloud storage -> Cloud Dataproc (cleaning the data) -> Big Query -> Cloud VertexAI (AI)
+DataProc : Fully managed, higky scalable service for running Apache Spark, 30+ open source tools and frameworks. ETL
+
+
+
+
+
+
+
